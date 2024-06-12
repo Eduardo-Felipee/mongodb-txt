@@ -1,0 +1,389 @@
+1 -  Faça uma pesquisa sobre a história do mongoDB e escreva sobre sua criação e aplicação.
+
+O MongoDB, criado em 2007 por Dwight Merriman, Eliot Horowitz e Kevin Ryan na DoubleClick (posteriormente adquirida pelo Google), surgiu para superar limitações dos bancos de dados relacionais na gestão de grandes volumes de dados e escalabilidade horizontal. Em 2009, a 10gen (agora MongoDB Inc.) lançou o MongoDB como um projeto de código aberto.
+
+Como um banco de dados NoSQL, o MongoDB armazena dados no formato BSON (Binary JSON), proporcionando alta flexibilidade e escalabilidade. Ele é amplamente utilizado em aplicações web e móveis, análise de big data, gestão de conteúdo, IoT e jogos, graças à sua capacidade de lidar com dados semi-estruturados e à sua escalabilidade horizontal.
+
+2 - Faça as seguintes operações:
+ 2.1 - Desenvolva um banco de dados utilizando o MongoDB, capaz de armazenar dados
+ relacionados aos equipamentos existentes na Faculdade e alimente a coleção com no
+ mínimo 20 equipamentos, apresentando diferentes configurações. Apenas dois dos
+ equipamentos cadastrados, deverão possuir impressora. Os dados devem seguir o
+ modelo anteriormente apresentado;
+ 2.1 - = 
+ 2.2 - Liste todos os dados inseridos;
+Fred> db.Fred.find()
+[
+  {
+    _id: ObjectId('6669a917670a4dbda453b726'),
+    Descricao: 'Computador Apple MacBook Air',
+    Marca: 'Apple',
+    Modelo: 'MacBook Air',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Apple M1',
+      Memoria: '8GB',
+      Disco: '256GB SSD',
+      Monitor: '13.3 inch',
+      Mouse: 'Touchpad'
+    },
+    Programas: [ 'macOS', 'Safari', 'Pages' ],
+    Aquisicao: '01/09/2024',
+    Valor: 4500
+  },
+  {
+    _id: ObjectId('6669a9a6670a4dbda453b727'),
+    Descricao: 'Computador HP Pavilion 27',
+    Marca: 'HP',
+    Modelo: 'Pavilion 27',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'AMD Ryzen 7',
+      Memoria: '32GB',
+      Disco: '1TB SSD',
+      Monitor: '27 inch',
+      Mouse: 'Optico',
+      Impressora: 'Canon Pixma'
+    },
+    Programas: [ 'Windows 11', 'Microsoft Office', 'Photoshop' ],
+    Aquisicao: '15/02/2024',
+    Valor: 6000
+  },
+  {
+    _id: ObjectId('6669ad82670a4dbda453b728'),
+    Descricao: 'Computador Apple iMac',
+    Marca: 'Apple',
+    Modelo: 'iMac 24',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Apple M1',
+      Memoria: '16GB',
+      Disco: '1TB SSD',
+      Monitor: '24 inch',
+      Teclado: 'Magic Keyboard',
+      Mouse: 'Magic Mouse'
+    },
+    Programas: [ 'macOS', 'Final Cut Pro', 'Logic Pro' ],
+    Aquisicao: '01/12/2024',
+    Valor: 8000
+  },
+  {
+    _id: ObjectId('6669ae62670a4dbda453b729'),
+    Descricao: 'Computador Acer Aspire 5',
+    Marca: 'Acer',
+    Modelo: 'Aspire 5',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i3',
+      Memoria: '8GB',
+      Disco: '1TB HDD',
+      Monitor: '15.6 inch',
+      Teclado: 'Padrão',
+      Mouse: 'Óptico'
+    },
+    Programas: [ 'Windows 10', 'VLC Player', 'Adobe Reader' ],
+    Aquisicao: '10/08/2024',
+    Valor: 3000
+  },
+  {
+    _id: ObjectId('6669af47670a4dbda453b72a'),
+    Descricao: 'Computador Lenovo ThinkCentre M720',
+    Marca: 'Lenovo',
+    Modelo: 'ThinkCentre M720',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i7',
+      Memoria: '16GB',
+      Disco: '256GB SSD',
+      Monitor: '24 inch',
+      Teclado: 'Ergonômico',
+      Mouse: 'Sem fio'
+    },
+    Programas: [ 'Ubuntu', 'LibreOffice', 'GIMP' ],
+    Aquisicao: '11/10/2024',
+    Valor: 4000
+  },
+  {
+    _id: ObjectId('6669b017670a4dbda453b72b'),
+    Descricao: 'Computador Dell OptiPlex 3080',
+    Marca: 'Dell',
+    Modelo: 'OptiPlex 3080',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i5',
+      Memoria: '16GB',
+      Disco: '512 SSD',
+      Monitor: '24 inch',
+      Teclado: 'Padrão',
+      Mouse: 'Óptico',
+      Impressora: 'HP LaserJet'
+    },
+    Programas: [ 'Windows 10', 'Microsoft Office', 'Adobe Reader' ],
+    Aquisicao: '01/10/2024',
+    Valor: 4500
+  },
+  {
+    _id: ObjectId('6669b047670a4dbda453b72c'),
+    Descricao: 'Computador HP Pavilion 27',
+    Marca: 'HP',
+    Modelo: 'Pavilion 27',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'AMD Ryzen 7',
+      Memoria: '32GB',
+      Disco: '1TB SSD',
+      Monitor: '27 inch',
+      Teclado: 'Mecânico',
+      Mouse: 'Óptico',
+      Impressora: 'Canon Pixma'
+    },
+    Programas: [ 'Windows 11', 'Microsoft Office', 'Photoshop' ],
+    Aquisicao: '15/02/2024',
+    Valor: 6000
+  },
+  {
+    _id: ObjectId('6669b05f670a4dbda453b72d'),
+    Descricao: 'Computador Lenovo ThinkPad T14s',
+    Marca: 'Lenovo',
+    Modelo: 'ThinkPad T14s',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'AMD Ryzen 5',
+      Memoria: '8GB',
+      Disco: '256GB SSD',
+      Monitor: '14 inch',
+      Teclado: 'Retroiluminado',
+      Mouse: 'TrackPoint'
+    },
+    Programas: [ 'Windows 11', 'Microsoft Office', 'Zoom' ],
+    Aquisicao: '25/09/2024',
+    Valor: 3500
+  },
+  {
+    _id: ObjectId('6669b06b670a4dbda453b72e'),
+    Descricao: 'Computador Asus ROG Strix G15',
+    Marca: 'Asus',
+    Modelo: 'ROG Strix G15',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processaodor: 'Intel Core i7',
+      Memoria: '16GB',
+      Disco: '512GB SSD',
+      Monitor: '15.6 inch',
+      Teclado: 'RGB',
+      Mouse: 'Gaming'
+    },
+    Programas: [ 'Windows 11', 'Steam', 'Discord' ],
+    Aquisicao: '11/05/2024',
+    Valor: 4500
+  },
+  {
+    _id: ObjectId('6669b079670a4dbda453b72f'),
+    Descricao: 'Computador Apple Mac mini',
+    Marca: 'Apple',
+    Modelo: 'Mac mini',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Apple M1',
+      Memoria: '8GB',
+      Disco: '256GB SSD',
+      Monitor: 'Sem monitor',
+      Teclado: 'Sem teclado',
+      Mouse: 'Mouse com fio'
+    },
+    Programas: [ 'macOS', 'Safari', 'iTunes' ],
+    Aquisicao: '20/07/2024',
+    Valor: 2000
+  },
+  {
+    _id: ObjectId('6669b0a6670a4dbda453b730'),
+    Descricao: 'Computador Lenovo Yoga C940',
+    Marca: 'Lenovo',
+    Modelo: 'Yoga C940',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i7',
+      Memoria: '16GB',
+      Disco: '512GB SSD',
+      Monitor: '14 inch',
+      Teclado: 'Teclado retroiluminado',
+      Mouse: 'Touchpad'
+    },
+    Programas: [ 'Windows 10', 'Microsoft Office', 'Adobe Photoshop' ],
+    Aquisicao: '05/10/2024',
+    Valor: 3500
+  },
+  {
+    _id: ObjectId('6669b0f1670a4dbda453b731'),
+    Descricao: 'Computador Dell Inspiron 15',
+    Marca: 'Dell',
+    Modelo: 'Inspiron 15',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i3',
+      Memoria: '8GB',
+      Disco: '256GB SSD',
+      Monitor: '15.6 inch',
+      Teclado: 'Padrão',
+      Mouse: 'Touchpad'
+    },
+    Programas: [ 'Windows 10', 'Microsoft Office', 'Google Chrome' ],
+    Aquisicao: '15/05/2024',
+    Valor: 2500
+  },
+  {
+    _id: ObjectId('6669b3bb670a4dbda453b732'),
+    Descricao: 'Computador Apple iMac',
+    Marca: 'Apple',
+    Modelo: 'iMac',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Apple M1',
+      Memoria: '16 Gb',
+      Disco: 'SSD 512Gb',
+      Monitor: 'Retina 24”',
+      Teclado: 'ABNT2',
+      Mouse: 'Magic Mouse'
+    },
+    Programas: [ 'macOS Monterey', 'iWork Suite', 'Sophos Antivirus' ],
+    Aquisicao: '17/05/2024',
+    Valor: 3800
+  },
+  {
+    _id: ObjectId('6669b3dc670a4dbda453b733'),
+    Descricao: 'Computador Samsung Galaxy Book',
+    Marca: 'Samsung',
+    Modelo: 'Galaxy Book',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i7',
+      Memoria: '16 Gb',
+      Disco: 'SSD 1Tb',
+      Monitor: 'LED 15.6”',
+      Teclado: 'ABNT2',
+      Mouse: 'Touchpad'
+    },
+    Programas: [ 'Windows 11', 'Microsoft 365', 'Avast Antivirus' ],
+    Aquisicao: '25/05/2024',
+    Valor: 3000
+  },
+  {
+    _id: ObjectId('6669b3ef670a4dbda453b734'),
+    Descricao: 'Computador Dell XPS',
+    Marca: 'Dell',
+    Modelo: 'XPS',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i7',
+      Memoria: '16 Gb',
+      Disco: 'SSD 512Gb',
+      Monitor: 'InfinityEdge 13.4” 4K',
+      Teclado: 'ABNT2',
+      Mouse: 'Óptico 2 Botões'
+    },
+    Programas: [ 'Windows 11', 'Microsoft Office', 'McAfee Antivirus' ],
+    Aquisicao: '12/05/2024',
+    Valor: 3800
+  },
+  {
+    _id: ObjectId('6669b562670a4dbda453b735'),
+    Descricao: 'Notebook Dell Inspiron',
+    Marca: 'Dell',
+    Modelo: 'Inspiron 15',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i5',
+      Memoria: '8GB',
+      Disco: '512GB SSD',
+      Monitor: '24 inch',
+      Teclado: 'Padrão',
+      Mouse: 'Touchpad'
+    },
+    Programas: [ 'Windows 10', 'Microsoft Office', 'Chrome' ],
+    Aquisicao: '20/06/2024',
+    Valor: 3500
+  },
+  {
+    _id: ObjectId('6669b61e670a4dbda453b736'),
+    Descricao: 'Desktop HP Pavilion',
+    Marca: 'HP',
+    Modelo: 'Pavilion Desktop',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'AMD Ryzen 5',
+      Memoria: '12GB',
+      Disco: '1TB HDD',
+      Monitor: '14 inch',
+      Teclado: 'Retroiluminado',
+      Mouse: 'Touchpad'
+    },
+    Programas: [ 'Windows 11', 'Microsoft Office', 'Discord' ],
+    Aquisicao: '25/07/2024',
+    Valor: 3800
+  },
+  {
+    _id: ObjectId('6669b6e7670a4dbda453b737'),
+    Descricao: 'Computador Samsung Galaxy Book',
+    Marca: 'Samsung',
+    Modelo: 'Galaxy Book',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i7',
+      Memoria: '16 Gb',
+      Disco: 'SSD 1Tb',
+      Monitor: 'LED 15.6”',
+      Teclado: 'ABNT2',
+      Mouse: 'Touchpad'
+    },
+    Programas: [ 'Windows 11', 'Microsoft 365', 'Avast Antivirus' ],
+    Aquisicao: '25/05/2024',
+    Valor: 3000
+  },
+  {
+    _id: ObjectId('6669b763670a4dbda453b738'),
+    Descricao: 'Computador Dell XPS',
+    Marca: 'Dell',
+    Modelo: 'XPS',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'Intel Core i7',
+      Memoria: '16 Gb',
+      Disco: 'SSD 512Gb',
+      Monitor: 'InfinityEdge 13.4” 4K',
+      Teclado: 'ABNT2',
+      Mouse: 'Óptico 2 Botões'
+    },
+    Programas: [ 'Windows 11', 'Microsoft Office', 'McAfee Antivirus' ],
+    Aquisicao: '12/05/2024',
+    Valor: 3800
+  },
+  {
+    _id: ObjectId('6669b811670a4dbda453b739'),
+    Descricao: 'Computador Lenovo IdeaCentre',
+    Marca: 'Lenovo',
+    Modelo: 'IdeaCentre',
+    Fabricacao: '2024',
+    Configuracao: {
+      Processador: 'AMD Ryzen 9',
+      Memoria: '64 Gb',
+      Disco: 'SSD 4Tb',
+      Monitor: 'LED 32” 4K',
+      Teclado: 'ABNT2',
+      Mouse: 'Óptico 5 Botões'
+    },
+    Programas: [ 'Windows 11', 'Microsoft Office', 'Kaspersky Antivirus' ],
+    Aquisicao: '30/05/2024',
+    Valor: 6000
+  }
+]
+Type "it" for more
+2.3 Altere todas as datas de fabricação dos equipamentos para um ano antes;
+Fred> db.Fred.updateMany({}, {$set: {Fabricacao: "2023"}})
+
+
+
+
+
+
+
+
